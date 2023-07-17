@@ -3,12 +3,11 @@
   <h3>Loading reviews...</h3>
 </div>
 
-<script src="{{ 'test-app.js' | asset_url }}" defer></script>
-
 {% schema %}
 {
   "name": "Reviews",
   "target": "section",
+  "javascript": "test-app.js",
   "settings": [
     { "type": "product", "id": "product", "label": "product", "autofill": true },
     { "type": "color", "id": "colour", "label": "Star Colour", "default": "#ff0000" }
