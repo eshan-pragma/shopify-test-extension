@@ -1,0 +1,17 @@
+<h3>Test Reviews</h3>
+<div id="reviewsContainer" style="width:100%;display:flex;flex-direction:column;">
+  <h3>Loading reviews...</h3>
+</div>
+
+<script src="{{ 'test-app.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Reviews",
+  "target": "section",
+  "settings": [
+    { "type": "product", "id": "product", "label": "product", "autofill": true },
+    { "type": "color", "id": "colour", "label": "Star Colour", "default": "#ff0000" }
+  ]
+}
+{% endschema %}
