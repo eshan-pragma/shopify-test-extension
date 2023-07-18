@@ -1,0 +1,17 @@
+<div style="display: flex;justify-content: space-between;align-items:center;">
+    <h2>Write a review</h2>
+    <button style="background: #000;color:#fff;padding:0.5rem 1rem;border: none;" onclick="addReview()">Add a review</button>
+</div>
+<div product-id="{{ product.id }}" id="addReviewForm" style="display: none;">
+    <textarea placeholder="Write a review" style="display: block;width: 100%;min-height: 100px;padding: 10px;"></textarea>
+    <button style="display: block;margin-left: auto;padding: 8px 16px;background: #2871f0;color:#fff;border:none;margin-top: 10px;">Submit</button>
+</div>
+
+{% schema %}
+{
+  "name": "Add Review",
+  "target": "section",
+  "javascript": "add-review-app.js",
+  "settings": []
+}
+{% endschema %}
