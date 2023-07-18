@@ -1,5 +1,6 @@
 window.onload = async () => {
-  let req = await fetch('https://reqres.in/api/users?page=1&pid={{ product.title }}');
+  let reviewsContainer = document.getElementById('reviewsContainer');
+  let req = await fetch(`https://reqres.in/api/users?page=1&vid=${reviewsContainer.getAttribute('variant-id')}`);
   res = await req.json();
 
   var reviews = res.data;
@@ -13,5 +14,5 @@ window.onload = async () => {
         </div>
       </div>`
   });
-  document.getElementById('reviewsContainer').innerHTML = html;
+  reviewsContainer.innerHTML = html;
 };
