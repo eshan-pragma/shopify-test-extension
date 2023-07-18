@@ -1,5 +1,5 @@
 <h3>Test Reviews</h3>
-<div id="reviewsContainer" style="width:100%;display:flex;flex-direction:column;" variant-id="{{ product.variants[0].id }}">
+<div id="reviewsContainer" style="width:100%;display:flex;flex-direction:column;" product-id="{{ product.id }}" reviews-per-page="{{ block.settings.reviews_per_page }}">
   <h3>Loading reviews...</h3>
 </div>
 
@@ -11,7 +11,7 @@
   "target": "section",
   "settings": [
     { "type": "product", "id": "product", "label": "product", "autofill": true },
-    { "type": "color", "id": "colour", "label": "Star Colour", "default": "#ff0000" }
+    { "type": "number", "id": "reviews_per_page", "label": "Reviews per page", "default": 10 }
   ]
 }
 {% endschema %}
