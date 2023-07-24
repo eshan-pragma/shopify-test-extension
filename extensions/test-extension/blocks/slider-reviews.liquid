@@ -1,0 +1,16 @@
+<h2>Listen to what our customers have to say</h2>
+<div id="sliderReviewsContainer" product-id="{{ product.id }}" reviews-in-slider="{{ block.settings.reviews_in_slider }}">
+  <h3>Loading reviews...</h3>
+</div>
+
+{% schema %}
+{
+  "name": "Reviews Slider",
+  "target": "section",
+  "stylesheet": "flickity.css",
+  "javascript": "flickity.js",
+  "settings": [
+    { "type": "number", "id": "reviews_in_slider", "label": "Reviews in slider", "default": 5 }
+  ]
+}
+{% endschema %}
